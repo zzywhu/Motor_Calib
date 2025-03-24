@@ -1,0 +1,9 @@
+%YAML:1.0
+
+pcdpath: "E:\\slam20_c_data\\motor-lidar\\calib_data\\motor2\\"
+
+z_shift: 0.0184
+
+max_distance: 0.05
+
+iter_num: 10

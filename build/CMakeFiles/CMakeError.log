@@ -1,0 +1,126 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/zzy/SensorsCalibration/Motor_Calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c1290/fast && /usr/bin/make  -f CMakeFiles/cmTC_c1290.dir/build.make CMakeFiles/cmTC_c1290.dir/build
+make[1]: Entering directory '/home/zzy/SensorsCalibration/Motor_Calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c1290.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_c1290.dir/src.c.o -c /home/zzy/SensorsCalibration/Motor_Calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_c1290
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c1290.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_c1290.dir/src.c.o -o cmTC_c1290 
+CMakeFiles/cmTC_c1290.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_c1290.dir/build.make:98: recipe for target 'cmTC_c1290' failed
+make[1]: *** [cmTC_c1290] Error 1
+make[1]: Leaving directory '/home/zzy/SensorsCalibration/Motor_Calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_c1290/fast' failed
+make: *** [cmTC_c1290/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/zzy/SensorsCalibration/Motor_Calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_54a6a/fast && /usr/bin/make  -f CMakeFiles/cmTC_54a6a.dir/build.make CMakeFiles/cmTC_54a6a.dir/build
+make[1]: Entering directory '/home/zzy/SensorsCalibration/Motor_Calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_54a6a.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_54a6a.dir/CheckFunctionExists.c.o -c /usr/local/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_54a6a
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54a6a.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_54a6a.dir/CheckFunctionExists.c.o -o cmTC_54a6a  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_54a6a.dir/build.make:98: recipe for target 'cmTC_54a6a' failed
+make[1]: *** [cmTC_54a6a] Error 1
+make[1]: Leaving directory '/home/zzy/SensorsCalibration/Motor_Calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_54a6a/fast' failed
+make: *** [cmTC_54a6a/fast] Error 2
+
+
+
+Determining if the function sgemm_ exists failed with the following output:
+Change Dir: /home/zzy/SensorsCalibration/Motor_Calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_146cb/fast && /usr/bin/make  -f CMakeFiles/cmTC_146cb.dir/build.make CMakeFiles/cmTC_146cb.dir/build
+make[1]: Entering directory '/home/zzy/SensorsCalibration/Motor_Calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_146cb.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_ -o CMakeFiles/cmTC_146cb.dir/CheckFunctionExists.c.o -c /usr/local/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_146cb
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_146cb.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_ -rdynamic CMakeFiles/cmTC_146cb.dir/CheckFunctionExists.c.o -o cmTC_146cb 
+CMakeFiles/cmTC_146cb.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `sgemm_'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_146cb.dir/build.make:98: recipe for target 'cmTC_146cb' failed
+make[1]: *** [cmTC_146cb] Error 1
+make[1]: Leaving directory '/home/zzy/SensorsCalibration/Motor_Calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_146cb/fast' failed
+make: *** [cmTC_146cb/fast] Error 2
+
+
+
+Determining if the function cheev_ exists failed with the following output:
+Change Dir: /home/zzy/SensorsCalibration/Motor_Calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e5952/fast && /usr/bin/make  -f CMakeFiles/cmTC_e5952.dir/build.make CMakeFiles/cmTC_e5952.dir/build
+make[1]: Entering directory '/home/zzy/SensorsCalibration/Motor_Calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e5952.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_ -o CMakeFiles/cmTC_e5952.dir/CheckFunctionExists.c.o -c /usr/local/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e5952
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e5952.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_ -rdynamic CMakeFiles/cmTC_e5952.dir/CheckFunctionExists.c.o -o cmTC_e5952  /usr/lib/x86_64-linux-gnu/libblas.so -lpthread -lm -ldl 
+CMakeFiles/cmTC_e5952.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `cheev_'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_e5952.dir/build.make:99: recipe for target 'cmTC_e5952' failed
+make[1]: *** [cmTC_e5952] Error 1
+make[1]: Leaving directory '/home/zzy/SensorsCalibration/Motor_Calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_e5952/fast' failed
+make: *** [cmTC_e5952/fast] Error 2
+
+
+
+Determining if the function cheev_ exists failed with the following output:
+Change Dir: /home/zzy/SensorsCalibration/Motor_Calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_74949/fast && /usr/bin/make  -f CMakeFiles/cmTC_74949.dir/build.make CMakeFiles/cmTC_74949.dir/build
+make[1]: Entering directory '/home/zzy/SensorsCalibration/Motor_Calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_74949.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_ -o CMakeFiles/cmTC_74949.dir/CheckFunctionExists.c.o -c /usr/local/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_74949
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_74949.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_ -rdynamic CMakeFiles/cmTC_74949.dir/CheckFunctionExists.c.o -o cmTC_74949  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so -fortranlibs 
+cc: error: unrecognized command-line option ‘-fortranlibs’
+CMakeFiles/cmTC_74949.dir/build.make:100: recipe for target 'cmTC_74949' failed
+make[1]: *** [cmTC_74949] Error 1
+make[1]: Leaving directory '/home/zzy/SensorsCalibration/Motor_Calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_74949/fast' failed
+make: *** [cmTC_74949/fast] Error 2
+
+
+
