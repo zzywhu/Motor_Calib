@@ -1,2 +1,2 @@
 # Motor_Calib
-Motor calibration for rotary LiDAR SLAM
+Motor calibration for Rotating LiDAR SLAM
